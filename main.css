@@ -1,0 +1,149 @@
+* { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg, #f5e9f7);
+      color: var(--text, #4a148c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    /* -----------------------------------------------------
+       CENTERED GAME CONTAINER (with max dimensions)
+    ------------------------------------------------------- */
+    #game {
+      position: relative;
+      width: 90vw;
+      height:60vh;
+      max-width: 700px;
+      max-height: 500px;
+      border: 4px solid #c471ed;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    .queen {
+      position: absolute;
+      bottom: 0;
+      left: 40px;           /* starting x-position */
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 2rem;
+      line-height: 60px;
+      background: #c471ed;
+      color: white;
+      transition: left 0.1s;
+    }
+    .obstacle, .item {
+      position: absolute;
+      bottom: 0;
+      width: 50px;
+      height: 50px;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 50px;
+    }
+    .item { bottom: 70px; }
+    #score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 1.5rem;
+    }
+    #message {
+      display: none;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #ffffffee;
+      padding: 2rem;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      text-align: center;
+      z-index: 10;
+    }
+    #replay-btn {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #c471ed;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #theme-toggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      background: none;
+      border: none;
+    }
+
+    #music-toggle{
+      position: absolute;
+      top: 15px;
+      right:60px;
+       margin-left: 10px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      background: none;
+      border: none;
+    }
+    #avatar-select {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      z-index: 10;
+    }
+    .avatar-option {
+      font-size: 2rem;
+      cursor: pointer;
+      border: 2px solid transparent;
+      padding: 4px;
+      border-radius: 8px;
+    }
+    .avatar-option:hover {
+      border-color: #c471ed;
+    }
+    #quote-box {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: #ffffffcc;
+      padding: 0.5rem;
+      border-radius: 8px;
+      font-size: 0.7rem;
+      max-width: 200px;
+    }
+ footer{
+  position: absolute;
+  bottom: 20px;
+   font-size: 30px;
+ }
+
+ .welcome{
+  position: absolute;
+  top: 20px;
+  font-size: 30px;
+ }
